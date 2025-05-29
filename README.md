@@ -14,11 +14,11 @@ A comprehensive ride-sharing platform built with modern web technologies, featur
 
 ## 📱 Demo Video
 
-<!-- Add your demo video here -->
 
-**[SPACE RESERVED FOR DEMO VIDEO]**
 
-_Please add your demo video link, embed, or upload here to showcase the application features and functionality._
+https://github.com/user-attachments/assets/c67edec8-8364-4ec1-8c48-e01d6d7e03c4
+
+
 
 ---
 
