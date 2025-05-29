@@ -26,7 +26,7 @@ const ConfirmRidePopUp = (props) => {
             console.log('🚀 Starting ride with OTP:', otp);
             console.log('🚀 Ride ID:', props.ride._id);
 
-            const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/rides/start-ride`, {
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/rides/start-ride`, {
                 params: {
                     rideId: props.ride._id,
                     otp: otp
@@ -124,10 +124,10 @@ const ConfirmRidePopUp = (props) => {
                         <button
                             disabled={isLoading}
                             className={`w-full mt-5 text-lg flex justify-center items-center font-semibold p-3 rounded-lg transition-all duration-200 ${isLoading
-                                    ? 'bg-gray-400 cursor-not-allowed'
-                                    : props.ride?.isTestRide
-                                        ? 'bg-red-600 hover:bg-red-700 text-white'
-                                        : 'bg-green-600 hover:bg-green-700 text-white'
+                                ? 'bg-gray-400 cursor-not-allowed'
+                                : props.ride?.isTestRide
+                                    ? 'bg-red-600 hover:bg-red-700 text-white'
+                                    : 'bg-green-600 hover:bg-green-700 text-white'
                                 }`}
                         >
                             {isLoading ? (
