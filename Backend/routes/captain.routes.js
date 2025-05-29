@@ -22,6 +22,20 @@ router.post('/login', [
 
 router.get('/profile', authMiddleware.authCaptain, captainController.getCaptainProfile)
 
+// Debug endpoint to check authentication
+router.get('/debug-auth', authMiddleware.authCaptain, (req, res) => {
+    res.status(200).json({
+        message: 'Authentication successful',
+        captain: {
+            id: req.captain._id,
+            email: req.captain.email,
+            firstname: req.captain.fullname?.firstname,
+            status: req.captain.status
+        },
+        timestamp: new Date().toISOString()
+    });
+});
+
 router.post('/update-location', authMiddleware.authCaptain, captainController.updateLocation)
 
 router.get('/logout', authMiddleware.authCaptain, captainController.logoutCaptain)

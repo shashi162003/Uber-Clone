@@ -112,19 +112,32 @@ exports.logoutCaptain = async (req, res, next) => {
 
 module.exports.updateLocation = async (req, res) => {
     try {
+        console.log('📍 Location update request received');
+        console.log('📍 Request body:', req.body);
+        console.log('📍 Captain from auth middleware:', req.captain ? {
+            id: req.captain._id,
+            name: req.captain.fullname?.firstname,
+            email: req.captain.email
+        } : 'No captain found');
+
         const { location } = req.body;
         const captainId = req.captain._id;
 
+        console.log('📍 Extracted location:', location);
+        console.log('📍 Captain ID:', captainId);
+
         if (!location || !location.ltd || !location.lng) {
+            console.log('❌ Invalid location data:', location);
             return res.status(400).json({ message: 'Location coordinates are required' });
         }
 
+        console.log('📍 Updating captain location in database...');
         const captain = await captainModel.findByIdAndUpdate(
             captainId,
             {
                 location: {
-                    ltd: location.ltd,
-                    lng: location.lng
+                    ltd: parseFloat(location.ltd),
+                    lng: parseFloat(location.lng)
                 },
                 status: 'active' // Set captain as active when location is updated
             },
@@ -132,15 +145,24 @@ module.exports.updateLocation = async (req, res) => {
         );
 
         if (!captain) {
+            console.log('❌ Captain not found with ID:', captainId);
             return res.status(404).json({ message: 'Captain not found' });
         }
 
-        console.log('📍 Captain location updated:', captain.fullname.firstname, location);
-        res.status(200).json({ message: 'Location updated successfully', location: captain.location });
+        console.log('✅ Captain location updated successfully:', captain.fullname.firstname, location);
+        res.status(200).json({
+            message: 'Location updated successfully',
+            location: captain.location,
+            status: captain.status
+        });
 
     } catch (error) {
-        console.error('Error updating captain location:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        console.error('❌ Error updating captain location:', error);
+        console.error('❌ Error details:', error.message);
+        res.status(500).json({
+            message: 'Internal server error',
+            error: process.env.NODE_ENV === 'development' ? error.message : 'Database error'
+        });
     }
 }
 

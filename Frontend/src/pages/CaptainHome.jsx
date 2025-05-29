@@ -83,16 +83,50 @@ const CaptainHome = () => {
 
             const updateLocationInDatabase = async (location) => {
                 try {
-                    await axios.post(`${import.meta.env.VITE_API_URL}/captains/update-location`, {
+                    const token = localStorage.getItem('token');
+                    if (!token) {
+                        console.error('❌ No authentication token found');
+                        alert('Authentication required. Please login again.');
+                        navigate('/captain-login');
+                        return;
+                    }
+
+                    console.log('💾 Updating location in database:', location);
+                    console.log('🔐 Using token for location update:', !!token);
+                    console.log('🌐 API URL:', import.meta.env.VITE_API_URL);
+
+                    const response = await axios.post(`${import.meta.env.VITE_API_URL}/captains/update-location`, {
                         location: location
                     }, {
                         headers: {
-                            Authorization: `Bearer ${localStorage.getItem('token')}`
-                        }
+                            Authorization: `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        timeout: 10000 // 10 second timeout
                     });
-                    console.log('✅ Location updated in database');
+
+                    console.log('✅ Location updated successfully:', response.data);
                 } catch (error) {
-                    console.error('❌ Error updating location in database:', error);
+                    console.error('❌ Failed to update location in database:', error);
+                    console.error('❌ Error response:', error.response?.data);
+                    console.error('❌ Error status:', error.response?.status);
+                    console.error('❌ API URL being used:', import.meta.env.VITE_API_URL);
+
+                    // Handle specific error cases
+                    if (error.response?.status === 401) {
+                        console.error('❌ Authentication failed for location update');
+                        console.error('❌ Token might be expired or invalid');
+                        // Don't automatically clear tokens - let user handle it manually
+                    } else if (error.response?.status === 400) {
+                        console.error('❌ Invalid location data:', error.response.data);
+                    } else if (error.code === 'ECONNABORTED') {
+                        console.error('❌ Request timeout - server may be slow');
+                    } else if (error.code === 'ERR_NETWORK') {
+                        console.error('❌ Network error - check internet connection');
+                        alert('Network error. Please check your internet connection.');
+                    } else {
+                        console.error('❌ Unexpected error:', error.message);
+                    }
                 }
             };
 
