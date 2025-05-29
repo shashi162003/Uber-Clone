@@ -23,7 +23,7 @@ const VehiclePanel = ({ setVehiclePanel, selectVehicle, fare, setConfirmRidePane
                     <img className='h-12' src={car} alt="" />
                     <div className='w-1/2 ml-2'>
                         <h4 className='font-medium text-base'>UberGo <span><i className="ri-user-fill"></i>4</span></h4>
-                        <h5 className='font-medium text-sm'>2 mins away</h5>
+                        <h5 className='font-medium text-sm'>{Math.floor(Math.random() * 3) + 2} mins away</h5>
                         <p className='font-normal text-xs text-gray-600'>Affordable, compact rides</p>
                     </div>
                     <h2 className='text-lg font-semibold'>₹{fare?.car || '193.20'}</h2>
@@ -42,7 +42,7 @@ const VehiclePanel = ({ setVehiclePanel, selectVehicle, fare, setConfirmRidePane
                     <img className='h-12' src={bike} alt="" />
                     <div className='w-1/2 ml-2'>
                         <h4 className='font-medium text-base'>Moto <span><i className="ri-user-fill"></i>1</span></h4>
-                        <h5 className='font-medium text-sm'>3 mins away</h5>
+                        <h5 className='font-medium text-sm'>{Math.floor(Math.random() * 4) + 2} mins away</h5>
                         <p className='font-normal text-xs text-gray-600'>Affordable motorcycle rides</p>
                     </div>
                     <h2 className='text-lg font-semibold'>₹{fare?.motorcycle || '65.35'}</h2>
@@ -61,7 +61,7 @@ const VehiclePanel = ({ setVehiclePanel, selectVehicle, fare, setConfirmRidePane
                     <img className='h-12' src={auto} alt="" />
                     <div className='w-1/2 ml-2'>
                         <h4 className='font-medium text-base'>UberAuto <span><i className="ri-user-fill"></i>3</span></h4>
-                        <h5 className='font-medium text-sm'>2 mins away</h5>
+                        <h5 className='font-medium text-sm'>{Math.floor(Math.random() * 3) + 1} mins away</h5>
                         <p className='font-normal text-xs text-gray-600'>Affordable Auto rides</p>
                     </div>
                     <h2 className='text-lg font-semibold'>₹{fare?.auto || '118.86'}</h2>
