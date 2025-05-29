@@ -10,7 +10,7 @@ const SocketProvider = ({ children }) => {
 
     useEffect(() => {
         // Initialize socket connection
-        const newSocket = io(`${import.meta.env.VITE_BASE_URL}`, {
+        const newSocket = io(`${import.meta.env.VITE_API_URL}`, {
             transports: ['polling', 'websocket'], // Try polling first, then websocket
             timeout: 20000,
             forceNew: true,

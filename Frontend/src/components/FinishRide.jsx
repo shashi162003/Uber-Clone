@@ -12,7 +12,7 @@ const FinishRide = (props) => {
     async function endRide() {
         setIsLoading(true)
         try {
-            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/rides/end-ride`, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/rides/end-ride`, {
                 rideId: props.ride._id
             }, {
                 headers: {
@@ -81,8 +81,8 @@ const FinishRide = (props) => {
                         onClick={endRide}
                         disabled={isLoading}
                         className={`w-full mt-5 flex text-lg justify-center items-center font-semibold p-3 rounded-lg transition-all duration-200 ${isLoading
-                                ? 'bg-gray-400 cursor-not-allowed'
-                                : 'bg-green-600 hover:bg-green-700 text-white'
+                            ? 'bg-gray-400 cursor-not-allowed'
+                            : 'bg-green-600 hover:bg-green-700 text-white'
                             }`}
                     >
                         {isLoading ? (

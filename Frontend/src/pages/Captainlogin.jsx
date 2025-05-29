@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { CaptainDataContext } from '../context/captainContext'
+import { CaptainDataContext } from '../context/CaptainContext'
 
 const Captainlogin = () => {
 
@@ -25,7 +25,7 @@ const Captainlogin = () => {
         password
       }
 
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/login`, captain)
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/captains/login`, captain)
 
       if (response.status === 200) {
         const data = response.data
@@ -82,8 +82,8 @@ const Captainlogin = () => {
           <button
             disabled={isLoading}
             className={`font-semibold mb-3 rounded-lg px-4 py-2 w-full text-lg transition-all duration-200 flex justify-center items-center ${isLoading
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-[#111] hover:bg-gray-800 text-white'
+              ? 'bg-gray-400 cursor-not-allowed'
+              : 'bg-[#111] hover:bg-gray-800 text-white'
               }`}
           >
             {isLoading ? (

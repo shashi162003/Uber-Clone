@@ -34,7 +34,7 @@ const UserSignup = () => {
         password: password
       }
 
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser)
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/users/register`, newUser)
 
       if (response.status === 201) {
         const data = response.data
@@ -118,8 +118,8 @@ const UserSignup = () => {
             <button
               disabled={isLoading}
               className={`font-semibold mb-3 rounded-lg px-4 py-2 w-full text-lg transition-all duration-200 flex justify-center items-center ${isLoading
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-[#111] hover:bg-gray-800 text-white'
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-[#111] hover:bg-gray-800 text-white'
                 }`}
             >
               {isLoading ? (

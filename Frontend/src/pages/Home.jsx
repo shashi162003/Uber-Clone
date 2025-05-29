@@ -91,7 +91,7 @@ const Home = () => {
 
         try {
             console.log('Fetching pickup suggestions for:', e.target.value)
-            const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/maps/get-suggestions`, {
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/maps/get-suggestions`, {
                 params: { input: e.target.value },
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -116,7 +116,7 @@ const Home = () => {
 
         try {
             console.log('Fetching destination suggestions for:', e.target.value)
-            const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/maps/get-suggestions`, {
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/maps/get-suggestions`, {
                 params: { input: e.target.value },
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -210,7 +210,7 @@ const Home = () => {
         setVehiclePanel(true)
         setPanelOpen(false)
 
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/rides/get-fare`, {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/rides/get-fare`, {
             params: { pickup, destination },
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -227,7 +227,7 @@ const Home = () => {
         try {
             console.log('🚗 Creating ride with data:', { pickup, destination, vehicleType });
 
-            const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/rides/create`, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/rides/create`, {
                 pickup,
                 destination,
                 vehicleType

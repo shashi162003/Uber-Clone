@@ -16,7 +16,7 @@ const UserProtectedWrapper = ({
             navigate('/login')
         }
 
-        axios.get(`${import.meta.env.VITE_BASE_URL}/users/profile`, {
+        axios.get(`${import.meta.env.VITE_API_URL}/users/profile`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
