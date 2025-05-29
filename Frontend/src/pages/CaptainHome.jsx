@@ -12,6 +12,7 @@ import axios from 'axios'
 import logo from '../assets/logo.png'
 import { generateCaptainAvatar } from '../utils/avatarGenerator'
 import SocketStatus from '../components/SocketStatus'
+import AuthDebugger from '../components/AuthDebugger'
 import homepageCover from '../assets/homepage-cover.jpg'
 
 const CaptainHome = () => {
@@ -311,6 +312,9 @@ const CaptainHome = () => {
 
             {/* Socket Status Indicator */}
             <SocketStatus />
+
+            {/* Authentication Debugger */}
+            <AuthDebugger />
         </div>
     )
 }
