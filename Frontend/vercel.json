@@ -1,35 +1,4 @@
 {
-  "version": 2,
-  "name": "uber-clone-frontend",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "VITE_API_URL": "@vite_api_url",
-    "VITE_GOOGLE_MAPS_API_KEY": "@vite_google_maps_api_key"
-  },
-  "build": {
-    "env": {
-      "VITE_API_URL": "@vite_api_url",
-      "VITE_GOOGLE_MAPS_API_KEY": "@vite_google_maps_api_key"
-    }
-  },
-  "functions": {},
   "rewrites": [
     {
       "source": "/(.*)",
