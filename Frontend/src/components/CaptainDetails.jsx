@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react'
-import { CaptainDataContext } from '../context/captainContext'
+import { CaptainDataContext } from '../context/CaptainContext'
 import { generateCaptainAvatar } from '../utils/avatarGenerator'
 
 const CaptainDetails = () => {
