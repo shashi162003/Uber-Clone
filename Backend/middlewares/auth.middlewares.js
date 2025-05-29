@@ -94,11 +94,26 @@ module.exports.authCaptain = async (req, res, next) => {
             const anyCaptain = await captainModel.findOne({}).limit(1);
             if (anyCaptain) {
                 console.log('❌ Database has captains, but not this ID. Sample captain ID:', anyCaptain._id.toString());
+
+                // Check if this is a token-database mismatch issue
+                console.log('🔧 Detected token-database ID mismatch');
+                console.log('🔧 Token ID:', decoded._id);
+                console.log('🔧 Available DB ID:', anyCaptain._id.toString());
+
+                return res.status(401).json({
+                    message: 'Token-Database ID mismatch. Please login again to get a fresh token.',
+                    error: 'TOKEN_ID_MISMATCH',
+                    tokenId: decoded._id,
+                    availableId: anyCaptain._id.toString(),
+                    action: 'RELOGIN_REQUIRED'
+                });
             } else {
                 console.log('❌ No captains found in database at all');
+                return res.status(401).json({
+                    message: 'No captains found in database',
+                    error: 'NO_CAPTAINS_IN_DB'
+                });
             }
-
-            return res.status(401).json({ message: 'Unauthorized - Captain not found' });
         }
 
         console.log('✅ Captain authenticated successfully:', captain.fullname.firstname);

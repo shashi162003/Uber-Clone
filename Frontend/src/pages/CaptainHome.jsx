@@ -116,8 +116,32 @@ const CaptainHome = () => {
                     // Handle specific error cases
                     if (error.response?.status === 401) {
                         console.error('❌ Authentication failed for location update');
-                        console.error('❌ Token might be expired or invalid');
-                        // Don't automatically clear tokens - let user handle it manually
+                        console.error('❌ Error details:', error.response?.data);
+
+                        // Check if this is a token-database ID mismatch
+                        if (error.response?.data?.error === 'TOKEN_ID_MISMATCH') {
+                            console.error('🔧 Token-Database ID mismatch detected');
+                            console.error('🔧 Token ID:', error.response.data.tokenId);
+                            console.error('🔧 Available DB ID:', error.response.data.availableId);
+
+                            // Show user-friendly message and offer to fix
+                            const shouldFix = confirm(
+                                'Authentication Error: Token-Database ID mismatch detected.\n\n' +
+                                `Your token has captain ID: ${error.response.data.tokenId}\n` +
+                                `But database has captain ID: ${error.response.data.availableId}\n\n` +
+                                'This happens when the captain account was recreated.\n' +
+                                'Click OK to clear the old token and login again with fresh credentials.'
+                            );
+
+                            if (shouldFix) {
+                                localStorage.removeItem('token');
+                                localStorage.removeItem('captain');
+                                alert('Token cleared! Redirecting to login...');
+                                navigate('/captain-login');
+                            }
+                        } else {
+                            console.error('❌ Token might be expired or invalid');
+                        }
                     } else if (error.response?.status === 400) {
                         console.error('❌ Invalid location data:', error.response.data);
                     } else if (error.code === 'ECONNABORTED') {
