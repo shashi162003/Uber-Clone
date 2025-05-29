@@ -1,12 +1,16 @@
-# 🚗 Uber Clone - Full Stack Ride Sharing Application
+# 📱 Uber Clone - Mobile-First Ride Sharing Application
 
 A comprehensive ride-sharing platform built with modern web technologies, featuring real-time communication, location services, and secure authentication. This application provides both user and driver (captain) interfaces with live ride tracking and management.
 
+**📱 MOBILE-OPTIMIZED:** This application is designed and optimized for mobile devices. For the best experience, please view on mobile or use your browser's mobile view (F12 → Toggle Device Toolbar).
+
 ## 🌟 Live Demo
 
-- **Frontend (User Interface):** [Deployed on Vercel](https://your-app.vercel.app)
-- **Backend API:** [Deployed on Render](https://your-api.render.com)
-- **API Documentation:** [View API Docs](#-api-documentation)
+- **📱 Frontend (Mobile-Optimized):** [https://uber-clone-webapp-ten.vercel.app/](https://uber-clone-webapp-ten.vercel.app/)
+- **⚡ Backend API:** [https://uber-clone-backend-3rbv.onrender.com](https://uber-clone-backend-3rbv.onrender.com)
+- **📚 API Documentation:** [View API Docs](#-api-documentation)
+
+> **💡 Best Experience:** Open the frontend link on your mobile device or use Chrome DevTools mobile view for optimal experience.
 
 ## 🚀 Features
 
@@ -34,7 +38,7 @@ A comprehensive ride-sharing platform built with modern web technologies, featur
 
 - **Real-time Communication** - Socket.IO for instant updates
 - **Geospatial Queries** - MongoDB geospatial indexing for location-based searches
-- **Responsive Design** - Mobile-first design with Tailwind CSS
+- **Mobile-First Design** - Optimized for mobile devices with responsive Tailwind CSS
 - **Progressive Web App** - PWA capabilities for mobile installation
 - **Error Handling** - Comprehensive error handling and validation
 - **Security** - JWT authentication, password hashing, and token blacklisting
@@ -82,6 +86,31 @@ Before running this application, make sure you have the following installed:
 - **MongoDB** (local installation or MongoDB Atlas account)
 - **Google Maps API Key** (for location services)
 - **Git**
+
+## 📱 Mobile Usage Guide
+
+This application is specifically designed for mobile devices. Here's how to get the best experience:
+
+### 🔧 Desktop Testing (Mobile View)
+
+1. **Open Chrome DevTools** (F12)
+2. **Click the device toggle** (📱 icon) or press `Ctrl+Shift+M`
+3. **Select a mobile device** (iPhone 12 Pro, Pixel 5, etc.)
+4. **Visit:** [https://uber-clone-webapp-ten.vercel.app/](https://uber-clone-webapp-ten.vercel.app/)
+
+### 📱 Mobile Device (Recommended)
+
+1. **Open your mobile browser** (Chrome, Safari, etc.)
+2. **Visit:** [https://uber-clone-webapp-ten.vercel.app/](https://uber-clone-webapp-ten.vercel.app/)
+3. **Add to Home Screen** for app-like experience
+
+### ✨ Features Optimized for Mobile
+
+- **Touch-friendly interface** with large tap targets
+- **Swipe gestures** for panel interactions
+- **Mobile-optimized maps** with touch controls
+- **Responsive layouts** that adapt to screen size
+- **Fast loading** optimized for mobile networks
 
 ## ⚡ Quick Start
 
@@ -240,7 +269,7 @@ uber-clone/
 ### Base URL
 
 - **Development:** `http://localhost:3000`
-- **Production:** `https://your-api.render.com`
+- **Production:** `https://uber-clone-backend-3rbv.onrender.com`
 
 ### Authentication
 
