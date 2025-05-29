@@ -1,4 +1,4 @@
-# 📱 Uber Clone - Mobile-First Ride Sharing Application
+# 🚗 Uber Clone - Full Stack Ride Sharing Application
 
 A comprehensive ride-sharing platform built with modern web technologies, featuring real-time communication, location services, and secure authentication. This application provides both user and driver (captain) interfaces with live ride tracking and management.
 
@@ -8,9 +8,19 @@ A comprehensive ride-sharing platform built with modern web technologies, featur
 
 - **📱 Frontend (Mobile-Optimized):** [https://uber-clone-webapp-ten.vercel.app/](https://uber-clone-webapp-ten.vercel.app/)
 - **⚡ Backend API:** [https://uber-clone-backend-3rbv.onrender.com](https://uber-clone-backend-3rbv.onrender.com)
-- **📚 API Documentation:** [View API Docs](#-api-documentation)
+- **📚 API Health Check:** [https://uber-clone-backend-3rbv.onrender.com/health](https://uber-clone-backend-3rbv.onrender.com/health)
 
 > **💡 Best Experience:** Open the frontend link on your mobile device or use Chrome DevTools mobile view for optimal experience.
+
+## 📱 Demo Video
+
+<!-- Add your demo video here -->
+
+**[SPACE RESERVED FOR DEMO VIDEO]**
+
+_Please add your demo video link, embed, or upload here to showcase the application features and functionality._
+
+---
 
 ## 🚀 Features
 
@@ -36,237 +46,270 @@ A comprehensive ride-sharing platform built with modern web technologies, featur
 
 ### 🔧 Technical Features
 
-- **Real-time Communication** - Socket.IO for instant updates
+- **Real-time Communication** - Socket.IO for instant updates and notifications
 - **Geospatial Queries** - MongoDB geospatial indexing for location-based searches
 - **Mobile-First Design** - Optimized for mobile devices with responsive Tailwind CSS
 - **Progressive Web App** - PWA capabilities for mobile installation
 - **Error Handling** - Comprehensive error handling and validation
 - **Security** - JWT authentication, password hashing, and token blacklisting
+- **Auto-reconnection** - Automatic socket reconnection and token mismatch handling
+
+---
 
 ## 🛠️ Tech Stack
 
-### Backend Technologies
-
-- **Node.js** - JavaScript runtime environment
-- **Express.js** - Web application framework
-- **MongoDB** - NoSQL database with geospatial indexing
-- **Mongoose** - MongoDB object modeling
-- **Socket.IO** - Real-time bidirectional communication
-- **JWT** - JSON Web Tokens for authentication
-- **bcrypt** - Password hashing and security
-- **express-validator** - Input validation middleware
-- **axios** - HTTP client for external API calls
-- **cors** - Cross-Origin Resource Sharing
-- **dotenv** - Environment variable management
-
 ### Frontend Technologies
 
-- **React 19** - Modern React with latest features
-- **Vite** - Fast build tool and development server
-- **React Router DOM** - Client-side routing
-- **Tailwind CSS** - Utility-first CSS framework
-- **GSAP** - High-performance animations
-- **Axios** - HTTP client for API calls
-- **Socket.IO Client** - Real-time communication
-- **Google Maps API** - Maps and location services
-- **Remix Icons** - Beautiful icon library
+- **React 19.1.0** - Modern React with latest features and concurrent rendering
+- **Vite 6.3.5** - Fast build tool and development server with HMR
+- **React Router DOM 7.6.1** - Client-side routing with nested routes
+- **Tailwind CSS 4.1.7** - Utility-first CSS framework for rapid UI development
+- **Socket.IO Client 4.8.1** - Real-time bidirectional communication
+- **Axios 1.9.0** - Promise-based HTTP client for API requests
+- **GSAP 3.13.0** - High-performance animations and transitions
+- **@react-google-maps/api 2.20.6** - Google Maps integration for React
+- **Remix Icons 4.6.0** - Beautiful open-source icon library
 
-### Development Tools
+### Backend Technologies
 
-- **ESLint** - Code linting and formatting
-- **nodemon** - Development server with auto-restart
-- **Vite** - Fast frontend build tool
+- **Node.js 18+** - JavaScript runtime built on Chrome's V8 engine
+- **Express.js 5.1.0** - Fast, unopinionated web framework for Node.js
+- **MongoDB** - NoSQL document database for flexible data storage
+- **Mongoose 8.15.1** - Elegant MongoDB object modeling for Node.js
+- **Socket.IO 4.8.1** - Real-time bidirectional event-based communication
+- **JWT (jsonwebtoken 9.0.2)** - JSON Web Tokens for secure authentication
+- **bcrypt 6.0.0** - Password hashing function for secure password storage
+- **Express Validator 7.2.1** - Middleware for input validation and sanitization
+- **CORS 2.8.5** - Cross-Origin Resource Sharing middleware
+- **dotenv 16.5.0** - Environment variable management
+- **cookie-parser 1.4.7** - Cookie parsing middleware
 
-## 📋 Prerequisites
+### Development & Build Tools
 
-Before running this application, make sure you have the following installed:
+- **ESLint 9.25.0** - JavaScript linting utility for code quality
+- **Nodemon 3.1.10** - Development server with automatic restart
+- **Vite** - Frontend build tool with fast HMR and optimized builds
+- **Git** - Distributed version control system
+- **GitHub** - Code repository and collaboration platform
 
-- **Node.js** (v18 or higher)
-- **npm** or **yarn**
-- **MongoDB** (local installation or MongoDB Atlas account)
-- **Google Maps API Key** (for location services)
-- **Git**
+### Deployment & Hosting
 
-## 📱 Mobile Usage Guide
+- **Vercel** - Frontend hosting with automatic deployments from Git
+- **Render** - Backend hosting with automatic deployments and scaling
+- **MongoDB Atlas** - Cloud-hosted MongoDB database service
 
-This application is specifically designed for mobile devices. Here's how to get the best experience:
+---
 
-### 🔧 Desktop Testing (Mobile View)
-
-1. **Open Chrome DevTools** (F12)
-2. **Click the device toggle** (📱 icon) or press `Ctrl+Shift+M`
-3. **Select a mobile device** (iPhone 12 Pro, Pixel 5, etc.)
-4. **Visit:** [https://uber-clone-webapp-ten.vercel.app/](https://uber-clone-webapp-ten.vercel.app/)
-
-### 📱 Mobile Device (Recommended)
-
-1. **Open your mobile browser** (Chrome, Safari, etc.)
-2. **Visit:** [https://uber-clone-webapp-ten.vercel.app/](https://uber-clone-webapp-ten.vercel.app/)
-3. **Add to Home Screen** for app-like experience
-
-### ✨ Features Optimized for Mobile
-
-- **Touch-friendly interface** with large tap targets
-- **Swipe gestures** for panel interactions
-- **Mobile-optimized maps** with touch controls
-- **Responsive layouts** that adapt to screen size
-- **Fast loading** optimized for mobile networks
-
-## ⚡ Quick Start
-
-### Backend Setup
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/yourusername/uber-clone.git
-   cd uber-clone
-   ```
-
-2. **Install Backend Dependencies**
-
-   ```bash
-   cd Backend
-   npm install
-   ```
-
-3. **Environment Setup**
-   Create a `.env` file in the Backend directory:
-
-   ```env
-   # Server Configuration
-   PORT=3000
-   NODE_ENV=development
-
-   # Database Configuration
-   MONGODB_URL=mongodb://localhost:27017/uber-clone
-   # For MongoDB Atlas:
-   # MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/uber-clone
-
-   # JWT Configuration
-   JWT_SECRET=your-super-secret-jwt-key-minimum-32-characters
-   JWT_EXPIRES_IN=24h
-
-   # Google Maps API (for location services)
-   GOOGLE_MAPS_API_KEY=your-google-maps-api-key
-   ```
-
-4. **Start Backend Server**
-
-   ```bash
-   # Development mode with auto-restart
-   npm run dev
-
-   # Production mode
-   npm start
-   ```
-
-### Frontend Setup
-
-1. **Install Frontend Dependencies**
-
-   ```bash
-   cd Frontend
-   npm install
-   ```
-
-2. **Environment Setup**
-   Create a `.env` file in the Frontend directory:
-
-   ```env
-   VITE_API_URL=http://localhost:3000
-   VITE_GOOGLE_MAPS_API_KEY=your-google-maps-api-key
-   ```
-
-3. **Start Frontend Development Server**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for Production**
-   ```bash
-   npm run build
-   ```
-
-### Verification
-
-- Backend: Navigate to `http://localhost:3000` - should show "Hello World"
-- Frontend: Navigate to `http://localhost:5173` - should show the application
-- Socket.IO: Check browser console for socket connection logs
-
-## 📁 Project Structure
+## 📁 Detailed Project Structure
 
 ```
 uber-clone/
-├── Backend/                    # Node.js/Express backend
+├── Backend/                           # Node.js/Express backend application
 │   ├── config/
-│   │   └── connectToDb.js     # MongoDB connection
-│   ├── controllers/           # Business logic
-│   │   ├── user.controller.js
-│   │   ├── captain.controller.js
-│   │   ├── ride.controller.js
-│   │   └── map.controller.js
-│   ├── models/               # Database schemas
-│   │   ├── user.model.js
-│   │   ├── captain.model.js
-│   │   ├── ride.model.js
-│   │   └── blacklistToken.model.js
-│   ├── routes/               # API routes
-│   │   ├── user.routes.js
-│   │   ├── captain.routes.js
-│   │   ├── ride.routes.js
-│   │   └── maps.routes.js
-│   ├── services/             # Service layer
-│   │   ├── user.service.js
-│   │   ├── captain.service.js
-│   │   ├── ride.service.js
-│   │   └── maps.service.js
-│   ├── middlewares/          # Custom middleware
-│   │   └── auth.middlewares.js
-│   ├── utils/               # Utility functions
-│   │   └── distanceCalculator.js
-│   ├── app.js               # Express app configuration
-│   ├── server.js            # Server entry point with Socket.IO
-│   └── package.json         # Backend dependencies
+│   │   └── connectToDb.js            # MongoDB connection configuration
+│   ├── controllers/                   # Request handlers and business logic
+│   │   ├── user.controller.js        # User authentication, profile, logout
+│   │   ├── captain.controller.js     # Captain auth, profile, location updates
+│   │   ├── ride.controller.js        # Ride creation, confirmation, management
+│   │   └── map.controller.js         # Maps, geocoding, distance calculation
+│   ├── models/                       # Mongoose database schemas
+│   │   ├── user.model.js            # User schema with authentication methods
+│   │   ├── captain.model.js         # Captain schema with vehicle details
+│   │   ├── ride.model.js            # Ride schema with status tracking
+│   │   └── blacklistToken.model.js  # JWT token blacklist for logout
+│   ├── routes/                       # Express route definitions
+│   │   ├── user.routes.js           # User registration, login, profile routes
+│   │   ├── captain.routes.js        # Captain registration, login, location routes
+│   │   ├── ride.routes.js           # Ride creation, confirmation, status routes
+│   │   └── maps.routes.js           # Maps, geocoding, autocomplete routes
+│   ├── services/                     # Business logic and external API calls
+│   │   ├── user.service.js          # User-related business operations
+│   │   ├── captain.service.js       # Captain-related business operations
+│   │   ├── ride.service.js          # Ride management and fare calculation
+│   │   └── maps.service.js          # Google Maps API integration
+│   ├── middlewares/                  # Custom Express middleware
+│   │   └── auth.middlewares.js      # JWT authentication and authorization
+│   ├── utils/                        # Utility functions and helpers
+│   │   └── distanceCalculator.js    # Distance and fare calculation utilities
+│   ├── app.js                       # Express application configuration
+│   ├── server.js                    # Server entry point with Socket.IO setup
+│   ├── package.json                 # Backend dependencies and scripts
+│   └── render.yaml                  # Render deployment configuration
 │
-├── Frontend/                 # React frontend
+├── Frontend/                         # React frontend application
 │   ├── src/
-│   │   ├── components/      # Reusable components
-│   │   │   ├── LocationSearchPanel.jsx
-│   │   │   ├── VehiclePanel.jsx
-│   │   │   ├── LiveTracking.jsx
-│   │   │   ├── RidePopUp.jsx
-│   │   │   └── ...
-│   │   ├── pages/          # Page components
-│   │   │   ├── Home.jsx
-│   │   │   ├── CaptainHome.jsx
-│   │   │   ├── UserLogin.jsx
-│   │   │   ├── Riding.jsx
-│   │   │   └── ...
-│   │   ├── context/        # React context providers
-│   │   │   ├── UserContext.jsx
-│   │   │   ├── CaptainContext.jsx
-│   │   │   └── SocketContext.jsx
-│   │   ├── hooks/          # Custom hooks
-│   │   │   └── useToast.js
-│   │   ├── utils/          # Utility functions
-│   │   │   └── avatarGenerator.js
-│   │   ├── assets/         # Static assets
-│   │   ├── App.jsx         # Main app component
-│   │   └── main.jsx        # App entry point
-│   ├── public/             # Public assets
-│   ├── package.json        # Frontend dependencies
-│   └── vite.config.js      # Vite configuration
+│   │   ├── components/              # Reusable React components
+│   │   │   ├── CaptainDetails.jsx   # Captain profile and statistics display
+│   │   │   ├── ConfirmRide.jsx      # Ride confirmation component
+│   │   │   ├── ConfirmRidePanel.jsx # Ride confirmation panel with details
+│   │   │   ├── ConfirmRidePopUp.jsx # Modal for ride confirmation
+│   │   │   ├── FinishRide.jsx       # Ride completion interface
+│   │   │   ├── LiveTracking.jsx     # Real-time location tracking map
+│   │   │   ├── LocationSearchPanel.jsx # Location search with autocomplete
+│   │   │   ├── LookingForDriver.jsx # Driver search loading animation
+│   │   │   ├── MapFallback.jsx      # Fallback component when maps fail
+│   │   │   ├── RideCompleted.jsx    # Ride completion success screen
+│   │   │   ├── RidePopUp.jsx        # Ride request notification popup
+│   │   │   ├── SocketStatus.jsx     # Real-time socket connection indicator
+│   │   │   ├── SocketTester.jsx     # Socket connection testing component
+│   │   │   ├── Spinner.jsx          # Loading spinner component
+│   │   │   ├── Toast.jsx            # Toast notification system
+│   │   │   ├── VehiclePanel.jsx     # Vehicle selection with pricing
+│   │   │   └── WaitingForDriver.jsx # Driver arrival waiting screen
+│   │   ├── pages/                   # Page components (route handlers)
+│   │   │   ├── Start.jsx            # Landing page with app introduction
+│   │   │   ├── UserLogin.jsx        # User authentication login form
+│   │   │   ├── UserSignup.jsx       # User registration form
+│   │   │   ├── UserLogout.jsx       # User logout handler
+│   │   │   ├── UserProtectedWrapper.jsx # Protected route wrapper for users
+│   │   │   ├── Home.jsx             # User dashboard with ride booking
+│   │   │   ├── Riding.jsx           # Active ride tracking page
+│   │   │   ├── CaptainLogin.jsx     # Captain authentication login form
+│   │   │   ├── CaptainSignup.jsx    # Captain registration with vehicle details
+│   │   │   ├── CaptainLogout.jsx    # Captain logout handler
+│   │   │   ├── CaptainProtectedWrapper.jsx # Protected route wrapper for captains
+│   │   │   ├── CaptainHome.jsx      # Captain dashboard with ride requests
+│   │   │   └── CaptainRiding.jsx    # Captain active ride management
+│   │   ├── context/                 # React Context API providers
+│   │   │   ├── UserContext.jsx      # User state management and authentication
+│   │   │   ├── CaptainContext.jsx   # Captain state management and authentication
+│   │   │   └── SocketContext.jsx    # Socket.IO connection and event management
+│   │   ├── hooks/                   # Custom React hooks
+│   │   │   └── useToast.js         # Toast notification management hook
+│   │   ├── utils/                   # Utility functions and helpers
+│   │   │   ├── avatarGenerator.js   # Dynamic avatar generation utilities
+│   │   │   └── authUtils.js        # Authentication helper functions
+│   │   ├── assets/                  # Static assets and media files
+│   │   │   ├── logo.png            # Application logo
+│   │   │   ├── homepage-cover.jpg   # Homepage background image
+│   │   │   ├── car.png             # Car vehicle icon
+│   │   │   ├── bike.png            # Motorcycle vehicle icon
+│   │   │   └── auto.png            # Auto-rickshaw vehicle icon
+│   │   ├── App.jsx                 # Main application component with routing
+│   │   ├── main.jsx                # Application entry point with providers
+│   │   └── index.css               # Global styles and Tailwind imports
+│   ├── public/                     # Public static assets
+│   │   ├── index.html              # HTML template
+│   │   └── favicon.ico             # Application favicon
+│   ├── package.json                # Frontend dependencies and scripts
+│   ├── vite.config.js              # Vite build tool configuration
+│   ├── tailwind.config.js          # Tailwind CSS configuration
+│   └── eslint.config.js            # ESLint linting configuration
 │
-├── README.md               # Project documentation
-├── .gitignore             # Git ignore rules
-└── package.json           # Root package.json
+├── README.md                       # Comprehensive project documentation
+├── .gitignore                      # Git ignore patterns
+└── package.json                    # Root workspace package.json
 ```
 
-## � API Documentation
+---
 
-### Base URL
+## 🔧 Frontend Architecture
+
+### Component Structure
+
+The frontend follows a modular component architecture with clear separation of concerns:
+
+#### Core Components
+
+- **App.jsx** - Main application with routing configuration
+- **main.jsx** - Application entry point with context providers
+
+#### Page Components
+
+- **Start.jsx** - Landing page with app introduction
+- **UserLogin.jsx** - User authentication with form validation
+- **UserSignup.jsx** - User registration with input validation
+- **CaptainLogin.jsx** - Captain authentication interface
+- **CaptainSignup.jsx** - Captain registration with vehicle details
+- **Home.jsx** - User dashboard with ride booking functionality
+- **CaptainHome.jsx** - Captain dashboard with ride request management
+- **Riding.jsx** - Active ride tracking for users
+- **CaptainRiding.jsx** - Active ride management for captains
+
+#### Reusable Components
+
+- **LocationSearchPanel.jsx** - Google Maps autocomplete integration
+- **VehiclePanel.jsx** - Vehicle selection with dynamic pricing
+- **LiveTracking.jsx** - Real-time GPS tracking with Socket.IO
+- **RidePopUp.jsx** - Ride request notifications
+- **ConfirmRidePopUp.jsx** - Ride confirmation modals
+- **SocketStatus.jsx** - Real-time connection status indicator
+
+### State Management
+
+- **UserContext.jsx** - User authentication and profile state
+- **CaptainContext.jsx** - Captain authentication and profile state
+- **SocketContext.jsx** - Real-time communication management
+
+### Routing Structure
+
+```javascript
+// Protected Routes
+/home                    # User dashboard (protected)
+/captain-home           # Captain dashboard (protected)
+/riding                 # Active ride page (protected)
+/captain-riding         # Captain ride management (protected)
+
+// Authentication Routes
+/login                  # User login
+/signup                 # User registration
+/captain-login          # Captain login
+/captain-signup         # Captain registration
+
+// Public Routes
+/                       # Landing page
+```
+
+### Frontend Libraries & Dependencies
+
+#### Core Dependencies
+
+```json
+{
+  "react": "^19.1.0",
+  "react-dom": "^19.1.0",
+  "react-router-dom": "^7.6.1",
+  "vite": "^6.3.5"
+}
+```
+
+#### UI & Styling
+
+```json
+{
+  "tailwindcss": "^4.1.7",
+  "@tailwindcss/vite": "^4.1.7",
+  "remixicon": "^4.6.0",
+  "gsap": "^3.13.0",
+  "@gsap/react": "^2.1.2"
+}
+```
+
+#### Communication & APIs
+
+```json
+{
+  "axios": "^1.9.0",
+  "socket.io-client": "^4.8.1",
+  "@react-google-maps/api": "^2.20.6"
+}
+```
+
+#### Development Tools
+
+```json
+{
+  "eslint": "^9.25.0",
+  "@vitejs/plugin-react": "^4.4.1",
+  "globals": "^16.0.0"
+}
+```
+
+---
+
+## 📚 API Documentation
+
+### Base URLs
 
 - **Development:** `http://localhost:3000`
 - **Production:** `https://uber-clone-backend-3rbv.onrender.com`
@@ -281,7 +324,7 @@ Authorization: Bearer <your-jwt-token>
 
 ---
 
-## 👥 User Endpoints
+## 👥 User API Endpoints
 
 ### 1. User Registration
 
@@ -302,26 +345,19 @@ Register a new user account.
 }
 ```
 
-**Validation:**
-
-- `email`: Valid email format
-- `fullname.firstname`: Minimum 3 characters
-- `password`: Minimum 6 characters
-
 **Response (201):**
 
 ```json
 {
-  "message": "User registered successfully",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "user": {
-    "_id": "64f8a1b2c3d4e5f6a7b8c9d0",
+    "_id": "60d5ecb74b24a1234567890a",
     "fullname": {
       "firstname": "John",
       "lastname": "Doe"
     },
     "email": "john.doe@example.com"
-  },
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
 }
 ```
 
@@ -344,16 +380,15 @@ Authenticate user and get access token.
 
 ```json
 {
-  "message": "Login successful",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "user": {
-    "_id": "64f8a1b2c3d4e5f6a7b8c9d0",
+    "_id": "60d5ecb74b24a1234567890a",
     "fullname": {
       "firstname": "John",
       "lastname": "Doe"
     },
     "email": "john.doe@example.com"
-  },
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
 }
 ```
 
@@ -361,16 +396,20 @@ Authenticate user and get access token.
 
 **GET** `/users/profile`
 
-Get current user's profile information.
+Get authenticated user's profile information.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Response (200):**
 
 ```json
 {
   "user": {
-    "_id": "64f8a1b2c3d4e5f6a7b8c9d0",
+    "_id": "60d5ecb74b24a1234567890a",
     "fullname": {
       "firstname": "John",
       "lastname": "Doe"
@@ -384,28 +423,31 @@ Get current user's profile information.
 
 **GET** `/users/logout`
 
-Logout user and blacklist token.
+Logout user and blacklist the token.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Response (200):**
 
 ```json
 {
-  "success": true,
-  "message": "Logout successful"
+  "message": "Logged out successfully"
 }
 ```
 
 ---
 
-## 🚕 Captain Endpoints
+## 🚕 Captain API Endpoints
 
 ### 1. Captain Registration
 
 **POST** `/captains/register`
 
-Register a new captain (driver) account.
+Register a new captain with vehicle details.
 
 **Request Body:**
 
@@ -419,26 +461,20 @@ Register a new captain (driver) account.
   "password": "securePassword123",
   "vehicle": {
     "color": "Red",
-    "plate": "ABC123",
+    "plate": "ABC-1234",
     "capacity": 4,
     "vehicleType": "car"
   }
 }
 ```
 
-**Validation:**
-
-- `vehicleType`: Must be one of: "car", "motorcycle", "auto"
-- `capacity`: Minimum 1
-- `color`, `plate`: Minimum 3 characters
-
 **Response (201):**
 
 ```json
 {
-  "message": "Captain registered successfully",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "captain": {
-    "_id": "64f8a1b2c3d4e5f6a7b8c9d1",
+    "_id": "60d5ecb74b24a1234567890b",
     "fullname": {
       "firstname": "Jane",
       "lastname": "Smith"
@@ -446,13 +482,12 @@ Register a new captain (driver) account.
     "email": "jane.smith@example.com",
     "vehicle": {
       "color": "Red",
-      "plate": "ABC123",
+      "plate": "ABC-1234",
       "capacity": 4,
       "vehicleType": "car"
     },
     "status": "inactive"
-  },
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
 }
 ```
 
@@ -475,9 +510,9 @@ Authenticate captain and get access token.
 
 ```json
 {
-  "message": "Login successful",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "captain": {
-    "_id": "64f8a1b2c3d4e5f6a7b8c9d1",
+    "_id": "60d5ecb74b24a1234567890b",
     "fullname": {
       "firstname": "Jane",
       "lastname": "Smith"
@@ -485,13 +520,12 @@ Authenticate captain and get access token.
     "email": "jane.smith@example.com",
     "vehicle": {
       "color": "Red",
-      "plate": "ABC123",
+      "plate": "ABC-1234",
       "capacity": 4,
       "vehicleType": "car"
     },
     "status": "inactive"
-  },
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
 }
 ```
 
@@ -499,16 +533,20 @@ Authenticate captain and get access token.
 
 **GET** `/captains/profile`
 
-Get current captain's profile information.
+Get authenticated captain's profile information.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Response (200):**
 
 ```json
 {
   "captain": {
-    "_id": "64f8a1b2c3d4e5f6a7b8c9d1",
+    "_id": "60d5ecb74b24a1234567890b",
     "fullname": {
       "firstname": "Jane",
       "lastname": "Smith"
@@ -516,14 +554,14 @@ Get current captain's profile information.
     "email": "jane.smith@example.com",
     "vehicle": {
       "color": "Red",
-      "plate": "ABC123",
+      "plate": "ABC-1234",
       "capacity": 4,
       "vehicleType": "car"
     },
     "status": "active",
     "location": {
-      "ltd": 40.7128,
-      "lng": -74.006
+      "ltd": 19.076,
+      "lng": 72.8777
     }
   }
 }
@@ -533,17 +571,21 @@ Get current captain's profile information.
 
 **POST** `/captains/update-location`
 
-Update captain's current location.
+Update captain's current location for real-time tracking.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Request Body:**
 
 ```json
 {
   "location": {
-    "ltd": 40.7128,
-    "lng": -74.006
+    "ltd": 19.076,
+    "lng": 72.8777
   }
 }
 ```
@@ -554,9 +596,10 @@ Update captain's current location.
 {
   "message": "Location updated successfully",
   "location": {
-    "ltd": 40.7128,
-    "lng": -74.006
-  }
+    "ltd": 19.076,
+    "lng": 72.8777
+  },
+  "status": "active"
 }
 ```
 
@@ -564,93 +607,96 @@ Update captain's current location.
 
 **GET** `/captains/logout`
 
-Logout captain and blacklist token.
+Logout captain and blacklist the token.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Response (200):**
 
 ```json
 {
-  "success": true,
-  "message": "Logout successful"
+  "message": "Logged out successfully"
 }
 ```
 
 ---
 
-## 🚗 Ride Endpoints
+## 🚗 Ride API Endpoints
 
-### 1. Create Ride
-
-**POST** `/rides/create`
-
-Create a new ride request.
-
-**Headers:** `Authorization: Bearer <user-token>`
-
-**Request Body:**
-
-```json
-{
-  "pickup": "123 Main Street, New York, NY",
-  "destination": "456 Broadway, New York, NY",
-  "vehicleType": "car"
-}
-```
-
-**Validation:**
-
-- `vehicleType`: Must be one of: "auto", "car", "moto"
-- `pickup`, `destination`: Minimum 3 characters
-
-**Response (201):**
-
-```json
-{
-  "_id": "64f8a1b2c3d4e5f6a7b8c9d2",
-  "user": "64f8a1b2c3d4e5f6a7b8c9d0",
-  "pickup": "123 Main Street, New York, NY",
-  "destination": "456 Broadway, New York, NY",
-  "fare": 25.5,
-  "status": "pending",
-  "duration": 1200,
-  "distance": 5000,
-  "otp": "123456"
-}
-```
-
-### 2. Get Fare Estimate
+### 1. Get Fare Estimate
 
 **GET** `/rides/get-fare`
 
-Get fare estimate for a ride.
+Calculate fare for a trip between pickup and destination.
 
-**Headers:** `Authorization: Bearer <user-token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Query Parameters:**
 
-- `pickup`: Pickup address
-- `destination`: Destination address
+```
+pickup=Mumbai Central Station
+destination=Bandra West
+```
 
 **Response (200):**
 
 ```json
 {
-  "auto": {
-    "fare": 15.25,
-    "duration": 1200,
-    "distance": 5000
+  "pickup": "Mumbai Central Station",
+  "destination": "Bandra West",
+  "fare": {
+    "auto": 85.5,
+    "car": 120.75,
+    "motorcycle": 45.25
   },
-  "car": {
-    "fare": 25.5,
-    "duration": 1200,
-    "distance": 5000
-  },
-  "moto": {
-    "fare": 12.75,
-    "duration": 900,
-    "distance": 5000
+  "distance": "8.5 km",
+  "duration": "25 mins"
+}
+```
+
+### 2. Create Ride
+
+**POST** `/rides/create`
+
+Create a new ride request.
+
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
+
+**Request Body:**
+
+```json
+{
+  "pickup": "Mumbai Central Station",
+  "destination": "Bandra West",
+  "vehicleType": "car"
+}
+```
+
+**Response (201):**
+
+```json
+{
+  "ride": {
+    "_id": "60d5ecb74b24a1234567890c",
+    "user": "60d5ecb74b24a1234567890a",
+    "pickup": "Mumbai Central Station",
+    "destination": "Bandra West",
+    "fare": 120.75,
+    "status": "pending",
+    "otp": "123456",
+    "createdAt": "2023-06-25T10:30:00.000Z"
   }
 }
 ```
@@ -659,15 +705,19 @@ Get fare estimate for a ride.
 
 **POST** `/rides/confirm`
 
-Captain confirms a ride request.
+Captain confirms and accepts a ride request.
 
-**Headers:** `Authorization: Bearer <captain-token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Request Body:**
 
 ```json
 {
-  "rideId": "64f8a1b2c3d4e5f6a7b8c9d2"
+  "rideId": "60d5ecb74b24a1234567890c"
 }
 ```
 
@@ -675,59 +725,84 @@ Captain confirms a ride request.
 
 ```json
 {
-  "_id": "64f8a1b2c3d4e5f6a7b8c9d2",
-  "user": {
-    "_id": "64f8a1b2c3d4e5f6a7b8c9d0",
-    "fullname": {
-      "firstname": "John",
-      "lastname": "Doe"
-    }
-  },
-  "captain": "64f8a1b2c3d4e5f6a7b8c9d1",
-  "pickup": "123 Main Street, New York, NY",
-  "destination": "456 Broadway, New York, NY",
-  "fare": 25.5,
-  "status": "accepted",
-  "otp": "123456"
+  "ride": {
+    "_id": "60d5ecb74b24a1234567890c",
+    "user": {
+      "_id": "60d5ecb74b24a1234567890a",
+      "fullname": {
+        "firstname": "John",
+        "lastname": "Doe"
+      }
+    },
+    "captain": {
+      "_id": "60d5ecb74b24a1234567890b",
+      "fullname": {
+        "firstname": "Jane",
+        "lastname": "Smith"
+      },
+      "vehicle": {
+        "color": "Red",
+        "plate": "ABC-1234",
+        "vehicleType": "car"
+      }
+    },
+    "pickup": "Mumbai Central Station",
+    "destination": "Bandra West",
+    "fare": 120.75,
+    "status": "accepted",
+    "otp": "123456"
+  }
 }
 ```
 
-### 4. Start Ride (Captain)
+### 4. Start Ride
 
 **GET** `/rides/start-ride`
 
-Captain starts the ride with OTP verification.
+Start the ride with OTP verification.
 
-**Headers:** `Authorization: Bearer <captain-token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Query Parameters:**
 
-- `rideId`: Ride ID
-- `otp`: 6-digit OTP from user
+```
+rideId=60d5ecb74b24a1234567890c
+otp=123456
+```
 
 **Response (200):**
 
 ```json
 {
-  "_id": "64f8a1b2c3d4e5f6a7b8c9d2",
-  "status": "ongoing",
-  "message": "Ride started successfully"
+  "ride": {
+    "_id": "60d5ecb74b24a1234567890c",
+    "status": "ongoing",
+    "startTime": "2023-06-25T10:45:00.000Z"
+  }
 }
 ```
 
-### 5. End Ride (Captain)
+### 5. End Ride
 
 **POST** `/rides/end-ride`
 
-Captain ends the ride.
+Complete the ride and calculate final fare.
 
-**Headers:** `Authorization: Bearer <captain-token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Request Body:**
 
 ```json
 {
-  "rideId": "64f8a1b2c3d4e5f6a7b8c9d2"
+  "rideId": "60d5ecb74b24a1234567890c"
 }
 ```
 
@@ -735,36 +810,44 @@ Captain ends the ride.
 
 ```json
 {
-  "_id": "64f8a1b2c3d4e5f6a7b8c9d2",
-  "status": "completed",
-  "fare": 25.5,
-  "message": "Ride completed successfully"
+  "ride": {
+    "_id": "60d5ecb74b24a1234567890c",
+    "status": "completed",
+    "endTime": "2023-06-25T11:15:00.000Z",
+    "duration": 1800,
+    "finalFare": 120.75
+  }
 }
 ```
 
 ---
 
-## 🗺️ Maps Endpoints
+## 🗺️ Maps API Endpoints
 
 ### 1. Get Coordinates
 
 **GET** `/maps/get-coordinates`
 
-Get coordinates for an address.
+Get latitude and longitude for an address.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Query Parameters:**
 
-- `address`: Address to geocode (minimum 3 characters)
+```
+address=Mumbai Central Station
+```
 
 **Response (200):**
 
 ```json
 {
-  "ltd": 40.7128,
-  "lng": -74.006,
-  "address": "123 Main Street, New York, NY"
+  "ltd": 19.033,
+  "lng": 72.8397
 }
 ```
 
@@ -772,26 +855,32 @@ Get coordinates for an address.
 
 **GET** `/maps/get-distance-time`
 
-Get distance and time between two locations.
+Calculate distance and travel time between two locations.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Query Parameters:**
 
-- `origin`: Origin address (minimum 3 characters)
-- `destination`: Destination address (minimum 3 characters)
+```
+origin=Mumbai Central Station
+destination=Bandra West
+```
 
 **Response (200):**
 
 ```json
 {
   "distance": {
-    "text": "5.2 km",
-    "value": 5200
+    "text": "8.5 km",
+    "value": 8500
   },
   "duration": {
-    "text": "12 mins",
-    "value": 720
+    "text": "25 mins",
+    "value": 1500
   }
 }
 ```
@@ -802,24 +891,26 @@ Get distance and time between two locations.
 
 Get autocomplete suggestions for address input.
 
-**Headers:** `Authorization: Bearer <token>`
+**Headers:**
+
+```
+Authorization: Bearer <token>
+```
 
 **Query Parameters:**
 
-- `input`: Partial address input (minimum 3 characters)
+```
+input=Mumbai Central
+```
 
 **Response (200):**
 
 ```json
 [
-  {
-    "description": "123 Main Street, New York, NY, USA",
-    "place_id": "ChIJd8BlQ2BZwokRAFQEcDlJRAI"
-  },
-  {
-    "description": "124 Main Street, New York, NY, USA",
-    "place_id": "ChIJd8BlQ2BZwokRAFQEcDlJRAJ"
-  }
+  "Mumbai Central Station, Mumbai, Maharashtra, India",
+  "Mumbai Central Railway Station, Mumbai, Maharashtra, India",
+  "Mumbai Central Bus Depot, Mumbai, Maharashtra, India",
+  "Mumbai Central Post Office, Mumbai, Maharashtra, India"
 ]
 ```
 
@@ -829,785 +920,374 @@ Get autocomplete suggestions for address input.
 
 ### Client to Server Events
 
-#### Join Room
+#### 1. join-room
+
+Join a specific room for real-time updates.
 
 ```javascript
-socket.emit("join", {
-  userType: "user", // or 'captain'
-  userId: "user-id-here",
-});
+socket.emit("join-room", { userId: "user123", userType: "user" });
 ```
 
-#### Update Captain Location
+#### 2. update-location-captain
+
+Captain broadcasts location update.
 
 ```javascript
 socket.emit("update-location-captain", {
-  userId: "captain-id",
-  location: {
-    ltd: 40.7128,
-    lng: -74.006,
-  },
+  userId: "captain123",
+  location: { ltd: 19.076, lng: 72.8777 },
 });
 ```
 
-#### Send Ride Request
+#### 3. new-ride
+
+User creates a new ride request.
 
 ```javascript
-socket.emit("ride-request", {
-  userId: "user-id",
-  pickup: "pickup-address",
-  destination: "destination-address",
-  vehicleType: "car",
-});
-```
-
-#### Accept Ride
-
-```javascript
-socket.emit("ride-accepted", {
-  rideId: "ride-id",
-  captainId: "captain-id",
-  userId: "user-id",
+socket.emit("new-ride", {
+  rideId: "ride123",
+  pickup: "Mumbai Central",
+  destination: "Bandra West",
 });
 ```
 
 ### Server to Client Events
 
-#### Join Confirmation
+#### 1. location-receive
+
+Receive location updates from captain.
 
 ```javascript
-socket.on("join-confirmed", (data) => {
-  console.log("Joined successfully:", data);
+socket.on("location-receive", (data) => {
+  console.log("Captain location:", data.location);
 });
 ```
 
-#### New Ride Request (to Captains)
+#### 2. ride-confirmed
+
+Ride has been confirmed by a captain.
 
 ```javascript
-socket.on("new-ride-request", (rideData) => {
-  console.log("New ride request:", rideData);
+socket.on("ride-confirmed", (ride) => {
+  console.log("Ride confirmed:", ride);
 });
 ```
 
-#### Ride Accepted (to User)
+#### 3. ride-started
+
+Ride has been started.
 
 ```javascript
-socket.on("ride-accepted", (rideData) => {
-  console.log("Ride accepted:", rideData);
+socket.on("ride-started", (ride) => {
+  console.log("Ride started:", ride);
 });
 ```
 
-#### Ride Started
+#### 4. ride-ended
+
+Ride has been completed.
 
 ```javascript
-socket.on("ride-started", (rideData) => {
-  console.log("Ride started:", rideData);
-});
-```
-
-#### Ride Completed
-
-```javascript
-socket.on("ride-completed", (rideData) => {
-  console.log("Ride completed:", rideData);
+socket.on("ride-ended", (ride) => {
+  console.log("Ride completed:", ride);
 });
 ```
 
 ---
 
-## 🗄️ Database Schemas
+## 📋 Prerequisites
 
-### User Model
+Before running this application, make sure you have the following installed:
 
-```javascript
-{
-  fullname: {
-    firstname: {
-      type: String,
-      required: true,
-      minlength: 3
-    },
-    lastname: {
-      type: String,
-      minlength: 3
-    }
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    minlength: 5
-  },
-  password: {
-    type: String,
-    required: true,
-    select: false
-  },
-  socketId: {
-    type: String
-  }
-}
+- **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
+- **npm** or **yarn** - Package manager
+- **MongoDB** - [Local installation](https://docs.mongodb.com/manual/installation/) or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- **Google Maps API Key** - [Get API Key](https://developers.google.com/maps/documentation/javascript/get-api-key)
+- **Git** - [Download](https://git-scm.com/)
+
+---
+
+## ⚡ Quick Start
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/uber-clone.git
+cd uber-clone
 ```
 
-### Captain Model
+### 2. Backend Setup
 
-```javascript
-{
-  fullname: {
-    firstname: {
-      type: String,
-      required: true,
-      minlength: 3
-    },
-    lastname: {
-      type: String,
-      minlength: 3
-    }
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    lowercase: true
-  },
-  password: {
-    type: String,
-    required: true,
-    select: false
-  },
-  socketId: {
-    type: String
-  },
-  status: {
-    type: String,
-    enum: ['active', 'inactive'],
-    default: 'inactive'
-  },
-  vehicle: {
-    color: {
-      type: String,
-      required: true,
-      minlength: 3
-    },
-    plate: {
-      type: String,
-      required: true,
-      minlength: 3
-    },
-    capacity: {
-      type: Number,
-      required: true,
-      min: 1
-    },
-    vehicleType: {
-      type: String,
-      required: true,
-      enum: ['car', 'motorcycle', 'auto']
-    }
-  },
-  location: {
-    ltd: {
-      type: Number
-    },
-    lng: {
-      type: Number
-    }
-  }
-}
+```bash
+# Navigate to backend directory
+cd Backend
+
+# Install dependencies
+npm install
+
+# Create environment file
+cp .env.example .env
+# Edit .env with your configuration
+
+# Start development server
+npm run dev
+
+# Or start production server
+npm start
 ```
 
-### Ride Model
+### 3. Frontend Setup
 
-```javascript
-{
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'user',
-    required: true
-  },
-  captain: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'captain'
-  },
-  pickup: {
-    type: String,
-    required: true
-  },
-  destination: {
-    type: String,
-    required: true
-  },
-  fare: {
-    type: Number,
-    required: true
-  },
-  status: {
-    type: String,
-    enum: ['pending', 'accepted', 'ongoing', 'completed', 'cancelled'],
-    default: 'pending'
-  },
-  duration: {
-    type: Number
-  },
-  distance: {
-    type: Number
-  },
-  otp: {
-    type: String,
-    select: false,
-    required: true
-  },
-  paymentID: {
-    type: String
-  },
-  orderId: {
-    type: String
-  },
-  signature: {
-    type: String
-  }
-}
+```bash
+# Navigate to frontend directory (in new terminal)
+cd Frontend
+
+# Install dependencies
+npm install
+
+# Create environment file
+cp .env.example .env
+# Edit .env with your configuration
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-### Blacklist Token Model
+### 4. Environment Configuration
 
-```javascript
-{
-  token: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    expires: 86400 // 24 hours
-  }
-}
+#### Backend (.env)
+
+```env
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# Database Configuration
+MONGODB_URL=mongodb://localhost:27017/uber-clone
+# For MongoDB Atlas:
+# MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/uber-clone
+
+# JWT Configuration
+JWT_SECRET=your-super-secret-jwt-key-minimum-32-characters
+JWT_EXPIRES_IN=24h
+
+# Google Maps API (for location services)
+GOOGLE_MAPS_API_KEY=your-google-maps-api-key
+
+# Frontend URL (for CORS)
+FRONTEND_URL=http://localhost:5173
+```
+
+#### Frontend (.env)
+
+```env
+# API Configuration
+VITE_API_URL=http://localhost:3000
+
+# Google Maps API Key
+VITE_GOOGLE_MAPS_API_KEY=your-google-maps-api-key
 ```
 
 ---
 
-## 🎨 Frontend Features
+## 🚀 Deployment
 
-### 📱 User Interface Pages
+### Backend Deployment (Render)
 
-#### 1. Landing Page (`/`)
+1. **Create Render Account** - [Sign up](https://render.com/)
 
-- **Component:** `Start.jsx`
-- **Features:**
-  - Welcome screen with app branding
-  - Navigation to user/captain login/signup
-  - Responsive design with animations
+2. **Create Web Service**
 
-#### 2. User Authentication
+   - Connect your GitHub repository
+   - Select the `Backend` directory as root
+   - Use the following settings:
+     ```
+     Build Command: npm install
+     Start Command: npm start
+     ```
 
-- **Login Page (`/login`):** `UserLogin.jsx`
-- **Signup Page (`/signup`):** `UserSignup.jsx`
-- **Features:**
-  - Form validation with real-time feedback
-  - JWT token management
-  - Automatic redirection after authentication
+3. **Environment Variables**
+   Set the following environment variables in Render dashboard:
 
-#### 3. User Home (`/home`)
-
-- **Component:** `Home.jsx`
-- **Features:**
-  - Location search with autocomplete
-  - Vehicle selection (car, motorcycle, auto)
-  - Fare estimation
-  - Real-time ride booking
-  - Live tracking during rides
-  - Interactive Google Maps integration
-
-#### 4. Captain Authentication
-
-- **Login Page (`/captain-login`):** `CaptainLogin.jsx`
-- **Signup Page (`/captain-signup`):** `CaptainSignup.jsx`
-- **Features:**
-  - Vehicle registration form
-  - Captain profile management
-  - Document upload simulation
-
-#### 5. Captain Dashboard (`/captain-home`)
-
-- **Component:** `CaptainHome.jsx`
-- **Features:**
-  - Real-time ride request notifications
-  - Location tracking and updates
-  - Ride acceptance/rejection
-  - Earnings tracking
-  - Status management (active/inactive)
-
-#### 6. Ride Management
-
-- **User Riding Page (`/riding`):** `Riding.jsx`
-- **Captain Riding Page (`/captain-riding`):** `CaptainRiding.jsx`
-- **Features:**
-  - Live GPS tracking
-  - OTP verification
-  - Ride progress updates
-  - Payment processing
-  - Ride completion
-
-### 🧩 Reusable Components
-
-#### Navigation & Layout
-
-- **LocationSearchPanel:** Address search with Google Places API
-- **VehiclePanel:** Vehicle type selection with pricing
-- **SocketStatus:** Real-time connection status indicator
-
-#### Ride Management
-
-- **ConfirmRide:** Ride confirmation with details
-- **LookingForDriver:** Loading state while finding drivers
-- **WaitingForDriver:** Driver assignment confirmation
-- **RidePopUp:** Captain ride request notification
-- **ConfirmRidePopUp:** Captain ride confirmation dialog
-- **LiveTracking:** Real-time GPS tracking component
-- **RideCompleted:** Ride completion and payment
-
-#### UI Elements
-
-- **Toast:** Notification system
-- **Spinner:** Loading indicators
-- **CaptainDetails:** Captain profile display
-- **FinishRide:** Ride completion interface
-
-### 🔧 Context Providers
-
-#### UserContext
-
-```javascript
-// Manages user authentication state
-{
-  user: {
-    _id: string,
-    fullname: { firstname: string, lastname: string },
-    email: string
-  },
-  setUser: function,
-  isLoading: boolean,
-  error: string
-}
-```
-
-#### CaptainContext
-
-```javascript
-// Manages captain authentication state
-{
-  captain: {
-    _id: string,
-    fullname: { firstname: string, lastname: string },
-    email: string,
-    vehicle: object,
-    status: 'active' | 'inactive',
-    location: { ltd: number, lng: number }
-  },
-  setCaptain: function,
-  isLoading: boolean,
-  error: string
-}
-```
-
-#### SocketContext
-
-```javascript
-// Manages real-time communication
-{
-  socket: SocketIO.Socket,
-  isConnected: boolean,
-  joinRoom: function,
-  sendRideRequest: function,
-  updateCaptainLocation: function,
-  acceptRide: function,
-  completeRide: function
-}
-```
-
-### 🎯 Custom Hooks
-
-#### useToast
-
-```javascript
-// Toast notification management
-const { toast, showToast, hideToast } = useToast();
-
-showToast("Success message", "success");
-showToast("Error message", "error");
-showToast("Info message", "info");
-```
-
-### 🛠️ Utility Functions
-
-#### Avatar Generator
-
-```javascript
-// Generate user/captain avatars
-import {
-  generateUserAvatar,
-  generateCaptainAvatar,
-} from "./utils/avatarGenerator";
-
-const userAvatar = generateUserAvatar(user);
-const captainAvatar = generateCaptainAvatar(captain);
-```
-
-### 🎨 Styling & Animations
-
-#### Tailwind CSS
-
-- **Utility-first CSS framework**
-- **Responsive design patterns**
-- **Custom color schemes**
-- **Mobile-first approach**
-
-#### GSAP Animations
-
-- **Smooth page transitions**
-- **Interactive UI elements**
-- **Loading animations**
-- **Micro-interactions**
-
-#### Remix Icons
-
-- **Comprehensive icon library**
-- **Consistent design language**
-- **Scalable vector icons**
-
----
-
-## 🚀 Deployment Guide
-
-### 🔧 Backend Deployment (Render)
-
-1. **Prepare for Deployment**
-
-   ```bash
-   # Ensure all dependencies are in package.json
-   cd Backend
-   npm install
-
-   # Test the application locally
-   npm start
    ```
-
-2. **Environment Variables on Render**
-
-   ```env
    NODE_ENV=production
    PORT=3000
-   MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/uber-clone
-   JWT_SECRET=your-super-secret-jwt-key-minimum-32-characters
+   MONGODB_URL=your-mongodb-atlas-connection-string
+   JWT_SECRET=your-production-jwt-secret
    JWT_EXPIRES_IN=24h
    GOOGLE_MAPS_API_KEY=your-google-maps-api-key
+   FRONTEND_URL=https://your-frontend-domain.vercel.app
    ```
 
-3. **Render Configuration**
+4. **Deploy**
+   - Render will automatically deploy when you push to main branch
 
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-   - **Node Version:** 18.x or higher
-   - **Auto-Deploy:** Enable for main branch
+### Frontend Deployment (Vercel)
 
-4. **Database Setup**
-   - Use MongoDB Atlas for production
-   - Configure IP whitelist (0.0.0.0/0 for Render)
-   - Update connection string in environment variables
+1. **Create Vercel Account** - [Sign up](https://vercel.com/)
 
-### 🎨 Frontend Deployment (Vercel)
+2. **Import Project**
 
-1. **Prepare for Deployment**
+   - Connect your GitHub repository
+   - Select the `Frontend` directory as root
+   - Vercel will auto-detect it's a Vite project
 
-   ```bash
-   cd Frontend
-   npm install
-   npm run build
+3. **Environment Variables**
+   Set the following environment variables in Vercel dashboard:
+
    ```
-
-2. **Environment Variables on Vercel**
-
-   ```env
-   VITE_API_URL=https://your-backend-app.render.com
+   VITE_API_URL=https://your-backend-domain.onrender.com
    VITE_GOOGLE_MAPS_API_KEY=your-google-maps-api-key
    ```
 
-3. **Vercel Configuration**
-   Create `vercel.json` in Frontend directory:
+4. **Deploy**
+   - Vercel will automatically deploy when you push to main branch
 
-   ```json
-   {
-     "rewrites": [
-       {
-         "source": "/(.*)",
-         "destination": "/index.html"
-       }
-     ]
-   }
-   ```
+---
 
-4. **Build Settings**
-   - **Framework Preset:** Vite
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-   - **Install Command:** `npm install`
+## 📱 Mobile Usage Guide
 
-### 🔄 CI/CD Pipeline
+This application is specifically designed for mobile devices. Here's how to get the best experience:
 
-#### GitHub Actions (Optional)
+### 🔧 Desktop Testing (Mobile View)
 
-Create `.github/workflows/deploy.yml`:
+1. **Open Chrome DevTools** (F12)
+2. **Click the device toggle** (📱 icon) or press `Ctrl+Shift+M`
+3. **Select a mobile device** (iPhone 12 Pro, Pixel 5, etc.)
+4. **Visit your deployed frontend URL**
 
-```yaml
-name: Deploy to Production
+### 📱 Mobile Device (Recommended)
 
-on:
-  push:
-    branches: [main]
+1. **Open your mobile browser** (Chrome, Safari, etc.)
+2. **Visit your deployed frontend URL**
+3. **Add to Home Screen** for app-like experience
 
-jobs:
-  deploy-backend:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to Render
-        # Render auto-deploys on push to main
-        run: echo "Backend deployed to Render"
+### ✨ Features Optimized for Mobile
 
-  deploy-frontend:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to Vercel
-        # Vercel auto-deploys on push to main
-        run: echo "Frontend deployed to Vercel"
+- **Touch-friendly interface** with large tap targets
+- **Swipe gestures** for panel interactions
+- **Mobile-optimized maps** with touch controls
+- **Responsive layouts** that adapt to screen size
+- **Fast loading** optimized for mobile networks
+
+---
+
+## 🧪 Testing
+
+### Running Tests
+
+```bash
+# Backend tests
+cd Backend
+npm test
+
+# Frontend tests
+cd Frontend
+npm test
 ```
 
-### 📊 Monitoring & Analytics
+### Manual Testing Checklist
 
-#### Backend Monitoring
+#### User Flow
 
-- **Render Dashboard:** Monitor server health and logs
-- **MongoDB Atlas:** Database performance metrics
-- **Error Logging:** Implement Winston or similar
+- [ ] User registration and login
+- [ ] Location search and autocomplete
+- [ ] Vehicle selection and fare calculation
+- [ ] Ride booking and confirmation
+- [ ] Real-time ride tracking
+- [ ] Ride completion
 
-#### Frontend Monitoring
+#### Captain Flow
 
-- **Vercel Analytics:** Page views and performance
-- **Google Analytics:** User behavior tracking
-- **Error Tracking:** Sentry or similar service
+- [ ] Captain registration with vehicle details
+- [ ] Captain login and profile
+- [ ] Location updates and broadcasting
+- [ ] Receiving and accepting ride requests
+- [ ] Starting rides with OTP verification
+- [ ] Completing rides
+
+#### Real-time Features
+
+- [ ] Socket.IO connection status
+- [ ] Live location updates
+- [ ] Ride status notifications
+- [ ] Automatic reconnection
+
+---
+
+## 🔧 Development
+
+### Project Scripts
+
+#### Backend Scripts
+
+```bash
+npm start          # Start production server
+npm run dev        # Start development server with nodemon
+npm test           # Run tests
+npm run build      # No build step required for Node.js
+```
+
+#### Frontend Scripts
+
+```bash
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run preview    # Preview production build
+npm run lint       # Run ESLint
+```
+
+### Code Structure Guidelines
+
+#### Backend
+
+- **Controllers** - Handle HTTP requests and responses
+- **Services** - Business logic and external API calls
+- **Models** - Database schemas and methods
+- **Routes** - API endpoint definitions
+- **Middlewares** - Request processing and authentication
+- **Utils** - Helper functions and utilities
+
+#### Frontend
+
+- **Pages** - Route components and main views
+- **Components** - Reusable UI components
+- **Context** - Global state management
+- **Hooks** - Custom React hooks
+- **Utils** - Helper functions and utilities
 
 ---
 
 ## 🔒 Security Features
 
-### Backend Security
+### Authentication & Authorization
 
-- **JWT Authentication:** Secure token-based auth with 24h expiration
-- **Password Hashing:** bcrypt with salt rounds
-- **Input Validation:** express-validator for all endpoints
-- **CORS Configuration:** Restricted origins for production
-- **Token Blacklisting:** Logout invalidates tokens
-- **Environment Variables:** Sensitive data protection
+- **JWT Tokens** - Secure authentication with expiration
+- **Password Hashing** - bcrypt for secure password storage
+- **Token Blacklisting** - Secure logout implementation
+- **Protected Routes** - Route-level authentication
+- **CORS Configuration** - Cross-origin request security
 
-### Frontend Security
+### Data Validation
 
-- **Token Storage:** Secure localStorage management
-- **Route Protection:** Private routes with authentication
-- **Input Sanitization:** XSS prevention
-- **HTTPS Enforcement:** Secure communication
-- **API Key Protection:** Environment variable usage
+- **Input Validation** - express-validator for API endpoints
+- **Schema Validation** - Mongoose schema validation
+- **XSS Protection** - Input sanitization
+- **SQL Injection Prevention** - NoSQL injection protection
 
----
+### Production Security
 
-## 🧪 Testing Strategy
-
-### Backend Testing
-
-```bash
-# Install testing dependencies
-cd Backend
-npm install --save-dev jest supertest mongodb-memory-server
-
-# Run tests
-npm test
-
-# Test coverage
-npm run test:coverage
-```
-
-### Frontend Testing
-
-```bash
-# Install testing dependencies
-cd Frontend
-npm install --save-dev @testing-library/react @testing-library/jest-dom vitest
-
-# Run tests
-npm run test
-
-# E2E testing with Cypress
-npm install --save-dev cypress
-npm run cypress:open
-```
-
-### Test Structure
-
-```
-tests/
-├── backend/
-│   ├── unit/
-│   ├── integration/
-│   └── e2e/
-└── frontend/
-    ├── components/
-    ├── pages/
-    └── e2e/
-```
+- **Environment Variables** - Sensitive data protection
+- **HTTPS Enforcement** - Secure communication
+- **Rate Limiting** - API abuse prevention
+- **Error Handling** - Secure error responses
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions to improve this Uber clone! Here's how you can help:
-
-### 🔧 Development Setup
-
-1. **Fork the repository**
-
-   ```bash
-   git clone https://github.com/yourusername/uber-clone.git
-   cd uber-clone
-   ```
-
-2. **Create a feature branch**
-
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-
-3. **Make your changes**
-
-   - Follow the existing code style
-   - Add tests for new features
-   - Update documentation as needed
-
-4. **Commit your changes**
-
-   ```bash
-   git commit -m 'Add some amazing feature'
-   ```
-
-5. **Push to the branch**
-
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-
-6. **Open a Pull Request**
-
-### 📝 Contribution Guidelines
-
-- **Code Style:** Follow ESLint configuration
-- **Commits:** Use conventional commit messages
-- **Testing:** Add tests for new features
-- **Documentation:** Update README for significant changes
-- **Issues:** Use issue templates for bug reports and feature requests
-
-### 🐛 Bug Reports
-
-When reporting bugs, please include:
-
-- Steps to reproduce
-- Expected behavior
-- Actual behavior
-- Screenshots (if applicable)
-- Environment details (OS, browser, Node version)
-
-### 💡 Feature Requests
-
-For new features, please provide:
-
-- Clear description of the feature
-- Use case and benefits
-- Possible implementation approach
-- Mockups or wireframes (if applicable)
-
----
-
-## 📈 Performance Optimization
-
-### Backend Optimizations
-
-- **Database Indexing:** Geospatial indexes for location queries
-- **Connection Pooling:** MongoDB connection optimization
-- **Caching:** Redis for session management (future enhancement)
-- **Rate Limiting:** API rate limiting for security
-- **Compression:** Gzip compression for responses
-
-### Frontend Optimizations
-
-- **Code Splitting:** Lazy loading for routes
-- **Image Optimization:** WebP format and lazy loading
-- **Bundle Analysis:** Webpack bundle analyzer
-- **Service Workers:** PWA capabilities
-- **CDN:** Static asset delivery optimization
-
----
-
-## 🔮 Future Enhancements
-
-### Planned Features
-
-- [ ] **Payment Integration:** Stripe/PayPal integration
-- [ ] **Push Notifications:** Real-time notifications
-- [ ] **Ride History:** Detailed ride history and receipts
-- [ ] **Rating System:** User and captain rating system
-- [ ] **Multi-language Support:** Internationalization
-- [ ] **Dark Mode:** Theme switching capability
-- [ ] **Offline Support:** PWA offline functionality
-- [ ] **Admin Dashboard:** Management interface
-- [ ] **Analytics Dashboard:** Business intelligence
-- [ ] **Chat System:** In-app messaging
-
-### Technical Improvements
-
-- [ ] **Microservices:** Service decomposition
-- [ ] **GraphQL:** API optimization
-- [ ] **Redis Caching:** Performance enhancement
-- [ ] **Docker:** Containerization
-- [ ] **Kubernetes:** Orchestration
-- [ ] **CI/CD Pipeline:** Automated testing and deployment
-- [ ] **Monitoring:** Application performance monitoring
-- [ ] **Load Balancing:** High availability setup
-
----
-
-## 📚 Learning Resources
-
-### Technologies Used
-
-- **Node.js:** [Official Documentation](https://nodejs.org/docs/)
-- **Express.js:** [Express Guide](https://expressjs.com/guide/)
-- **MongoDB:** [MongoDB University](https://university.mongodb.com/)
-- **React:** [React Documentation](https://react.dev/)
-- **Socket.IO:** [Socket.IO Guide](https://socket.io/docs/)
-- **JWT:** [JWT Introduction](https://jwt.io/introduction)
-- **Google Maps API:** [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript)
-
-### Tutorials and Guides
-
-- **MERN Stack:** [Full Stack Development](https://www.mongodb.com/mern-stack)
-- **Real-time Apps:** [Socket.IO Tutorial](https://socket.io/get-started/)
-- **Authentication:** [JWT Best Practices](https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/)
-- **Deployment:** [Render Deployment Guide](https://render.com/docs)
-- **Frontend:** [Vite Documentation](https://vitejs.dev/guide/)
-
----
-
-## 🆘 Troubleshooting
+## 🐛 Troubleshooting
 
 ### Common Issues
 
@@ -1616,26 +1296,26 @@ For new features, please provide:
 **MongoDB Connection Error**
 
 ```bash
-Error: MongoNetworkError: failed to connect to server
+Error: connect ECONNREFUSED 127.0.0.1:27017
 ```
 
-**Solution:** Check MongoDB URL and network connectivity
+**Solution:** Ensure MongoDB is running locally or check Atlas connection string
 
-**JWT Token Error**
+**JWT Secret Error**
 
 ```bash
-Error: JsonWebTokenError: invalid token
+Error: secretOrPrivateKey has a value of "undefined"
 ```
 
-**Solution:** Verify JWT_SECRET in environment variables
+**Solution:** Set JWT_SECRET in your .env file
 
-**Port Already in Use**
+**Google Maps API Error**
 
 ```bash
-Error: listen EADDRINUSE: address already in use :::3000
+Error: Google Maps API key is not configured
 ```
 
-**Solution:** Kill process or use different port
+**Solution:** Set GOOGLE_MAPS_API_KEY in your .env file
 
 #### Frontend Issues
 
@@ -1645,124 +1325,132 @@ Error: listen EADDRINUSE: address already in use :::3000
 Error: Network Error
 ```
 
-**Solution:** Check VITE_API_URL in environment variables
+**Solution:** Check VITE_API_URL in .env and ensure backend is running
 
-**Google Maps Error**
+**Maps Not Loading**
 
 ```bash
 Error: Google Maps JavaScript API error
 ```
 
-**Solution:** Verify Google Maps API key and billing
+**Solution:** Check VITE_GOOGLE_MAPS_API_KEY and enable required APIs
 
-**Build Error**
+**Socket Connection Failed**
 
 ```bash
-Error: Failed to resolve import
+Error: WebSocket connection failed
 ```
 
-**Solution:** Check import paths and dependencies
+**Solution:** Check backend Socket.IO configuration and CORS settings
 
 ### Debug Mode
 
-**Backend Debug**
+Enable debug mode for detailed logging:
+
+#### Backend Debug
 
 ```bash
 DEBUG=* npm run dev
 ```
 
-**Frontend Debug**
+#### Frontend Debug
 
 ```bash
-npm run dev -- --debug
+# Add to .env
+VITE_DEBUG=true
 ```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to improve this Uber Clone project!
+
+### How to Contribute
+
+1. **Fork the Repository**
+
+   ```bash
+   git fork https://github.com/yourusername/uber-clone.git
+   ```
+
+2. **Create Feature Branch**
+
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+3. **Make Changes**
+
+   - Follow the existing code style
+   - Add tests for new features
+   - Update documentation
+
+4. **Commit Changes**
+
+   ```bash
+   git commit -m "Add amazing feature"
+   ```
+
+5. **Push to Branch**
+
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+6. **Open Pull Request**
+   - Describe your changes
+   - Include screenshots for UI changes
+   - Reference any related issues
+
+### Development Guidelines
+
+- **Code Style** - Follow ESLint configuration
+- **Commit Messages** - Use conventional commit format
+- **Testing** - Add tests for new features
+- **Documentation** - Update README for significant changes
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) file for details.
-
-### License Summary
-
-- ✅ Commercial use
-- ✅ Modification
-- ✅ Distribution
-- ✅ Private use
-- ❌ Liability
-- ❌ Warranty
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👥 Team & Acknowledgments
+## 👨‍💻 Author
 
-### Development Team
+**Your Name**
 
-- **Full Stack Developer:** [Your Name](https://github.com/yourusername)
-- **UI/UX Designer:** [Designer Name](https://github.com/designer)
-- **DevOps Engineer:** [DevOps Name](https://github.com/devops)
-
-### Acknowledgments
-
-- **Uber:** Inspiration for the ride-sharing concept
-- **Google Maps:** Location services and mapping
-- **MongoDB:** Database technology
-- **Render & Vercel:** Hosting platforms
-- **Open Source Community:** Various libraries and tools
-
-### Special Thanks
-
-- Contributors who helped improve the codebase
-- Beta testers who provided valuable feedback
-- Community members who reported bugs and suggested features
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- Email: your.email@example.com
 
 ---
 
-## 📞 Support & Contact
+## 🙏 Acknowledgments
 
-### Get Help
-
-- **Documentation:** [GitHub Wiki](https://github.com/yourusername/uber-clone/wiki)
-- **Issues:** [GitHub Issues](https://github.com/yourusername/uber-clone/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/yourusername/uber-clone/discussions)
-
-### Contact Information
-
-- **Email:** your-email@example.com
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- **Twitter:** [@yourusername](https://twitter.com/yourusername)
-- **Portfolio:** [your-portfolio.com](https://your-portfolio.com)
-
-### Business Inquiries
-
-For business partnerships, licensing, or custom development:
-
-- **Business Email:** business@example.com
-- **Phone:** +1 (555) 123-4567
+- **React Team** - For the amazing React framework
+- **Express.js** - For the robust backend framework
+- **MongoDB** - For the flexible database solution
+- **Socket.IO** - For real-time communication
+- **Google Maps** - For location services
+- **Tailwind CSS** - For the utility-first CSS framework
+- **Vercel & Render** - For hosting and deployment services
 
 ---
 
-## 📊 Project Statistics
-
-### Codebase Metrics
+## 📊 Project Stats
 
 - **Total Lines of Code:** ~15,000+
-- **Backend Files:** 25+
-- **Frontend Components:** 30+
-- **API Endpoints:** 15+
-- **Database Models:** 4
-- **Real-time Events:** 10+
-
-### Performance Metrics
-
-- **API Response Time:** <200ms average
-- **Frontend Load Time:** <3s initial load
-- **Database Queries:** Optimized with indexes
-- **Real-time Latency:** <100ms
-- **Mobile Performance:** 90+ Lighthouse score
+- **Components:** 20+ React components
+- **API Endpoints:** 15+ RESTful endpoints
+- **Real-time Events:** 10+ Socket.IO events
+- **Database Models:** 4 MongoDB schemas
+- **Dependencies:** 30+ npm packages
 
 ---
 
 **⭐ If you found this project helpful, please give it a star on GitHub!**
 
-**🚀 Ready to build the next generation of ride-sharing apps? Let's get started!**
+**🔗 Live Demo:** [https://uber-clone-webapp-ten.vercel.app/](https://uber-clone-webapp-ten.vercel.app/)
