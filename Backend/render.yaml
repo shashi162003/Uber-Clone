@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: uber-clone-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: MONGODB_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 24h
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false
+    autoDeploy: true
+    branch: main
+    rootDir: Backend
+    
+databases:
+  - name: uber-clone-mongodb
+    databaseName: uber_clone
+    user: uber_admin
+    plan: free
+    
+# Environment Variables to set in Render Dashboard:
+# MONGODB_URL: mongodb+srv://username:password@cluster.mongodb.net/uber-clone
+# JWT_SECRET: your-super-secret-jwt-key-minimum-32-characters
+# GOOGLE_MAPS_API_KEY: your-google-maps-api-key
