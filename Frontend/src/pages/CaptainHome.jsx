@@ -11,6 +11,7 @@ import { CaptainDataContext } from '../context/CaptainContext'
 import axios from 'axios'
 import logo from '../assets/logo.png'
 import { generateCaptainAvatar } from '../utils/avatarGenerator'
+import SocketStatus from '../components/SocketStatus'
 import homepageCover from '../assets/homepage-cover.jpg'
 
 const CaptainHome = () => {
@@ -273,6 +274,9 @@ const CaptainHome = () => {
                     ride={ride}
                     setConfirmRidePopupPanel={setConfirmRidePopupPanel} setRidePopupPanel={setRidePopupPanel} />
             </div>
+
+            {/* Socket Status Indicator */}
+            <SocketStatus />
         </div>
     )
 }

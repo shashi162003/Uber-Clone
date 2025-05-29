@@ -9,17 +9,27 @@ const SocketProvider = ({ children }) => {
     const [isConnected, setIsConnected] = useState(false);
 
     useEffect(() => {
-        // Initialize socket connection
+        // Check if API URL is configured
+        if (!import.meta.env.VITE_API_URL) {
+            console.error('❌ VITE_API_URL is not defined! Check your .env file.');
+            return;
+        }
+
+        console.log('🔌 Initializing Socket.IO connection to:', import.meta.env.VITE_API_URL);
+
+        // Initialize socket connection with production-optimized settings
         const newSocket = io(`${import.meta.env.VITE_API_URL}`, {
-            transports: ['polling', 'websocket'], // Try polling first, then websocket
-            timeout: 20000,
+            transports: ['polling'], // Use polling only for better Vercel compatibility
+            timeout: 30000, // Increased timeout for slower connections
             forceNew: true,
             reconnection: true,
-            reconnectionDelay: 1000,
-            reconnectionAttempts: 5,
-            maxReconnectionAttempts: 5,
-            withCredentials: true,
-            autoConnect: true
+            reconnectionDelay: 2000, // Increased delay
+            reconnectionAttempts: 10, // More attempts
+            maxReconnectionAttempts: 10,
+            withCredentials: false, // Disable for CORS simplicity
+            autoConnect: true,
+            upgrade: false, // Prevent upgrade to websocket
+            rememberUpgrade: false
         });
 
         // Connection event handlers

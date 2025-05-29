@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import LiveTracking from '../components/LiveTracking';
 import logo from '../assets/logo.png'
 import { generateUserAvatar } from '../utils/avatarGenerator'
+import SocketStatus from '../components/SocketStatus'
 
 const Home = () => {
     const [pickup, setPickup] = useState('')
@@ -357,6 +358,9 @@ const Home = () => {
                     setWaitingForDriver={setWaitingForDriver}
                     waitingForDriver={waitingForDriver} />
             </div>
+
+            {/* Socket Status Indicator */}
+            <SocketStatus />
         </div>
     )
 }

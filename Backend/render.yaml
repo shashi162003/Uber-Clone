@@ -19,16 +19,17 @@ services:
         value: 24h
       - key: GOOGLE_MAPS_API_KEY
         sync: false
+      - key: FRONTEND_URL
+        value: https://uber-clone-webapp-ten.vercel.app
     autoDeploy: true
     branch: main
     rootDir: Backend
-    
+
 databases:
   - name: uber-clone-mongodb
     databaseName: uber_clone
     user: uber_admin
     plan: free
-    
 # Environment Variables to set in Render Dashboard:
 # MONGODB_URL: mongodb+srv://username:password@cluster.mongodb.net/uber-clone
 # JWT_SECRET: your-super-secret-jwt-key-minimum-32-characters

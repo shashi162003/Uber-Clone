@@ -10,7 +10,8 @@ const server = http.createServer(app);
 // Initialize Socket.IO with environment-specific CORS
 const allowedOrigins = process.env.NODE_ENV === 'production'
     ? [
-        process.env.FRONTEND_URL || "https://your-app.vercel.app",
+        process.env.FRONTEND_URL || "https://uber-clone-webapp-ten.vercel.app",
+        "https://uber-clone-webapp-ten.vercel.app",
         "https://*.vercel.app",
         "https://*.onrender.com"
     ]
@@ -21,16 +22,23 @@ const allowedOrigins = process.env.NODE_ENV === 'production'
         "http://localhost:4000"
     ];
 
+console.log('🌐 Socket.IO CORS allowed origins:', allowedOrigins);
+console.log('🌐 Environment:', process.env.NODE_ENV);
+console.log('🌐 Frontend URL:', process.env.FRONTEND_URL);
+
 const io = socketIo(server, {
     cors: {
         origin: allowedOrigins,
-        methods: ["GET", "POST"],
-        credentials: true
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: false, // Disable for CORS simplicity
+        allowedHeaders: ["Content-Type", "Authorization"]
     },
-    transports: ['websocket', 'polling'], // Allow both transports
+    transports: ['polling'], // Use polling only for better compatibility
     allowEIO3: true, // Allow Engine.IO v3 clients
     pingTimeout: 60000,
-    pingInterval: 25000
+    pingInterval: 25000,
+    upgradeTimeout: 30000,
+    maxHttpBufferSize: 1e6
 });
 
 // Make Socket.IO instance available to the app
