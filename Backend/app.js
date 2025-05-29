@@ -61,4 +61,4 @@ app.use('/captains', captainRoutes);
 app.use('/maps', mapRoutes);
 app.use('/rides', rideRoutes);
 
-module.exports = app;
+module.exports = app;// Force redeploy Fri, May 30, 2025  2:17:46 AM
