@@ -15,13 +15,17 @@ const corsOptions = {
         ? [
             process.env.FRONTEND_URL || "https://your-app.vercel.app",
             /^https:\/\/.*\.vercel\.app$/,
-            /^https:\/\/.*\.onrender\.com$/
+            /^https:\/\/.*\.onrender\.com$/,
+            "https://devshashi.dev",
+            /^https:\/\/.*\.devshashi\.dev$/
         ]
         : [
             "http://localhost:5173",
             "http://localhost:5174",
             "http://localhost:3000",
-            "http://localhost:4000"
+            "http://localhost:4000",
+            "https://devshashi.dev",
+            /^https:\/\/.*\.devshashi\.dev$/
         ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
